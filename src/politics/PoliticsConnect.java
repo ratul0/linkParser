@@ -4,31 +4,27 @@
  * and open the template in the editor.
  */
 
-package Storage;
+package politics;
 
 import CustomExceptions.TerminateException;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
  * @author yousufkhan
  */
-public class Connect {
+public class PoliticsConnect {
     
     public static Connection CreateConntection(){
         Connection c = null;
         try {
-            Class.forName("org.postgresql.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             c = DriverManager
-                    .getConnection("jdbc:postgresql://localhost/thesis?searchpath=public",
-                            "postgres", "a");
+                    .getConnection("jdbc:mysql://localhost/thesis",
+                            "root", "");
             c.setAutoCommit(false);
             System.out.println("Opened database successfully");
             return c;
