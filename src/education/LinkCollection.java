@@ -6,7 +6,6 @@
 
 package education;
 
-import sports.*;
 import CustomExceptions.TerminateException;
 import Storage.Connect;
 import static Storage.Connect.insertData;
