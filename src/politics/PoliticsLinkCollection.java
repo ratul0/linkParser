@@ -6,7 +6,7 @@
 
 package politics;
 
-import accident.AccidentConnect;
+
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ArrayList;
